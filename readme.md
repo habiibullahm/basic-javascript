@@ -24,4 +24,81 @@ console.log(height)
 
 result : 4
 
-## 
+## remainder (modulo)
+```sh
+const remainder = 11 % 3 ;
+console.log(remainder);
+```
+result : 2 
+
+## Compound Assignment With Augmented Addition
+```sh
+let a = 35;
+let b = 11;
+let c = 4;
+
+a += 2;
+b += 5;
+c += 9;
+```
+result :
+a : 37
+b : 16
+c : 13
+
+## Compound Assignment With Augmented subtraction
+```sh
+let a = 1;
+let b = 5;
+let c = 2;
+
+// Only change code below this line
+a -= 1;
+b -= 4;
+c -= 2;
+```
+result :
+a : 0
+b : 1
+c : 0
+## Compound Assignment With Augmented Multiplication
+```sh
+let a = 5;
+let b = 2;
+let c = 2;
+
+a *= 2;
+b *= 6;
+c *= 20;
+```
+result : 
+a : 10
+b : 12
+c : 40
+## Compound Assignment With Augmented Division
+```sh
+let a = 9;
+let b = 6;
+let c = 3;
+
+a /= 3;
+b /= 2;
+c /= 1;
+```
+
+result : 
+a : 3
+b : 3
+c : 3
+
+## Escaping Literal Quotes in Strings
+```sh
+const myStr = "I am a \"double quoted\" string inside \"double qoutes\"."; 
+```
+
+result : myStr = "I am a "double quoted" string inside "double qoutes"."
+
+## Quoting Strings with Single Quotes
+```sh
+const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+```
