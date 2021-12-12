@@ -150,3 +150,20 @@ console.log(typeof aku sedang bekerja);
 ```
 
 result : boolean
+
+## NaN
+
+```sh
+let myJob = Number('ngooding11');
+console.log(myJob);
+```
+
+result : NaN
+
+## isNaN
+
+```sh
+console.log(isNaN(5));
+```
+
+result : False (Karna 5 adalah angka)
