@@ -124,3 +124,29 @@ console.log(parseFloat("100.1));
 ```
 
 result : 100,1
+
+## string type
+
+```sh
+let myName = "Habib";
+console.log(typeof myName);
+```
+
+result : string
+
+## number type
+
+```sh
+let  money = 100;
+console.log(typeof money);
+```
+result : number
+
+## boolean
+
+```sh
+let aku sedang bekerja = false ;
+console.log(typeof aku sedang bekerja);
+```
+
+result : boolean
