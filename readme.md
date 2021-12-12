@@ -125,7 +125,7 @@ console.log(parseFloat("100.1));
 
 result : 100,1
 
-## string type
+## string data type
 
 ```sh
 let myName = "Habib";
@@ -134,7 +134,7 @@ console.log(typeof myName);
 
 result : string
 
-## number type
+## number data type
 
 ```sh
 let  money = 100;
@@ -142,7 +142,7 @@ console.log(typeof money);
 ```
 result : number
 
-## boolean
+## boolean data type
 
 ```sh
 let aku sedang bekerja = false ;
