@@ -102,3 +102,9 @@ result : myStr = "I am a "double quoted" string inside "double qoutes"."
 ```sh
 const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
 ```
+## ! String template 
+```sh
+let myName : "habib";
+console.log(`${myName} belajar di glints academy`;
+```
+result : habib belajar di glints academy
