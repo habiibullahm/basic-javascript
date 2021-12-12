@@ -108,3 +108,12 @@ let myName : "habib";
 console.log(`${myName} belajar di glints academy`;
 ```
 result : habib belajar di glints academy
+
+## Built-in function
+```sh
+console.log(parseInt("100.1"));
+console.log(parseFloat("100.1));
+```
+
+result : 100
+         100,1
