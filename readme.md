@@ -167,3 +167,13 @@ console.log(isNaN(5));
 ```
 
 result : False (Karna 5 adalah angka)
+
+## Ternary Operator
+
+```sh
+const score = "C";
+const hasil = score === "A" ? 'Cie dapat A' : 'Gapapa deh ;('
+console.log(hasil);
+```
+
+result : Gapapa deh ;( 
