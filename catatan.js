@@ -1,8 +1,7 @@
 let mobil = [
     {
         name:'brio',
-        brand : 'honda',
-        speed : 80
+        brand : 'honda',        speed : 80
     },
     {
        name : 'L300',
@@ -27,10 +26,7 @@ function getSummary(number=1){
     return `Mobil ${data.brand} ${data.name}, kecepatan maximal ${data.speed} km/jam`
 }
 
-mobil.map((item)=>{
-    getSummary(item)
-})
-console.log(getSummary(2));
+console.log(getSummary(1));
 // console.log(mobil.length);
 // console.log(mobil[0]);
 // console.log(mobil[0].name);
