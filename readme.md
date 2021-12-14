@@ -177,3 +177,12 @@ console.log(hasil);
 ```
 
 result : Gapapa deh ;( 
+
+## Concat with plus operator
+
+```sh
+let myStr = "This is the first sentence. ";
+myStr += "This is the second sentence.";
+console.log(myStr);
+```
+
