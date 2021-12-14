@@ -47,5 +47,59 @@ describe("Example tests", () => {
     assert.deepEqual(actual, expected);
   });
 });
-
 ```
+## Create Phone Number
+
+```sh
+function createPhoneNumber(numbers) {
+  if (numbers.length !== 10 ) {
+      return "harus 10 angka"
+  }
+  let result = "";
+  for (let i = 0; i < numbers.length; i++) {
+    switch (i) {
+      case 0:
+        result = "(" + numbers[i];
+        break;
+      case 3:
+        result += ") " + numbers[i];
+        break;
+      case 6:
+        result += "-" + numbers[i];
+        break;
+      default:
+        result += numbers[i];
+        break;
+    }
+  }
+  return result;
+}
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(createPhoneNumber(data));
+```
+```sh
+function createPhoneNumber(numbers) {
+  if (numbers.length !== 10 ) {
+    return "harus 10 angka"
+  } 
+  let result = "";
+  for (let i = 0; i < numbers.length; i++) {
+    if (i === 0 ) {
+        result = "(" + numbers[i]
+    } else if (i === 3) {
+        result += ") " + numbers[i]
+    } else if (i === 6) {
+        result += "-" + numbers[i]
+    } else {
+        result += numbers[i]
+    }
+  }
+  return result;
+}
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(createPhoneNumber(data));
+```
+
+
+result : (123) 456-7890
+
