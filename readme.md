@@ -186,3 +186,7 @@ myStr += "This is the second sentence.";
 console.log(myStr);
 ```
 
+## append to string
+const someAdjective = "Fun, Interesting, Boring";
+let myStr = "Learning to code is ";
+myStr += someAdjective
