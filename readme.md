@@ -200,3 +200,12 @@ let lastNameLength = 0;
 const lastName = "Lovelace";
 lastNameLength = lastName.length;
 ```
+
+## Find the First Character
+```sh
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+firstLetterOfLastName = lastName[0]; 
+```
+
+result : L 
