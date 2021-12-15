@@ -290,3 +290,14 @@ console.log(myArray);
 ```
 
 result : [["dog", 3]]
+
+## Manipulate Arrays With unshift()
+shift : Menghapus data elemen pertama
+unshift : Menambahkan data di elemen pertama
+```sh
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift(); 
+myArray.unshift(["Paul", 35])
+```
+
+result : [["Paul", 35], ["dog", 3]]
