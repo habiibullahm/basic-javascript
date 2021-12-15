@@ -219,6 +219,18 @@ const lastLetterOfLastName = lastName[lastName.length - 1];
 
 result : e
 
+## Remove First and Last Character
+
+```sh
+function removeChar (str) {
+    return str.slice(1,-1)
+}
+let nama = 'habib';
+console.log(removeChar(nama))
+```
+
+result : abi
+
 ## World Blanks
 
 ```sh
