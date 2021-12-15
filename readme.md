@@ -280,3 +280,13 @@ result : [["John", 23], ["cat", 2], ["dog", 3]]
 const myArray = [["John", 23], ["cat", 2]];
 const removedFromMyArray =myArray.pop()
 ```
+
+## Manipulate Arrays With shift()
+
+```sh
+const myArray = [["John", 23], ["dog", 3]];
+const removedFromMyArray = myArray.shift()
+console.log(myArray);
+```
+
+result : [["dog", 3]]
