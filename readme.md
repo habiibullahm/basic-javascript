@@ -265,3 +265,11 @@ const myData = myArray[2][1];
 result : 8 
 mengakses array index 2 yaitu : [7,8,9]
 lalu mengakses array index 1 : 8
+
+## Manipulate Arrays With push()
+
+```sh
+const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]);
+```
+result : [["John", 23], ["cat", 2], ["dog", 3]]
