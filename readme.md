@@ -242,3 +242,12 @@ const myArray = [["habib", 23], ["unis", 20]];
 const myArray = [50, 60, 70];
 let myData = myArray[myArray.length-1];
 ```
+
+## modify array data with indexes
+```sh
+const myArray = [18, 64, 99];
+myArray[0] = 45
+```
+
+
+
