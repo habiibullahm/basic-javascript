@@ -313,3 +313,12 @@ const myList = [
   ["myCampus", 5],
 ];
 ```
+
+## Write Reusable JavaScript with Functions
+
+```sh
+function reusableFunction(){
+  console.log("Hi World")
+}
+reusableFunction()
+```
