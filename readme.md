@@ -229,3 +229,9 @@ const myAdverb = "quickly";
 
 const wordBlanks = myNoun + " " + myAdjective + " " + myVerb + " "+ myAdverb;
 ```
+
+## Nested array
+
+```sh
+const myArray = [["habib", 23], ["unis", 20]];
+```
