@@ -273,3 +273,10 @@ const myArray = [["John", 23], ["cat", 2]];
 myArray.push(["dog", 3]);
 ```
 result : [["John", 23], ["cat", 2], ["dog", 3]]
+
+## Manipulate Arrays With pop()
+
+```sh
+const myArray = [["John", 23], ["cat", 2]];
+const removedFromMyArray =myArray.pop()
+```
