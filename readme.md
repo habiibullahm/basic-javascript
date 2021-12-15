@@ -235,3 +235,10 @@ const wordBlanks = myNoun + " " + myAdjective + " " + myVerb + " "+ myAdverb;
 ```sh
 const myArray = [["habib", 23], ["unis", 20]];
 ```
+
+## access array data
+
+```sh
+const myArray = [50, 60, 70];
+let myData = myArray[myArray.length-1];
+```
