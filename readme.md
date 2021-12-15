@@ -301,3 +301,15 @@ myArray.unshift(["Paul", 35])
 ```
 
 result : [["Paul", 35], ["dog", 3]]
+
+## Shopping List
+
+```sh
+const myList = [
+  ["myName", 1], 
+  ["myAge", 23],
+  ["myJob", 10],
+  ["myHome", 12],
+  ["myCampus", 5],
+];
+```
