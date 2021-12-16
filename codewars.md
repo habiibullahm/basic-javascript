@@ -142,3 +142,20 @@ describe("Tests", function() {
   });
 });
 ```
+
+## Convert a Number to a String!
+
+```sh
+function numberToString(num="") {
+    return `${num}`
+}
+```
+
+Test
+```sh
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(numberToString(67), '67');
+  });
+});
+```
