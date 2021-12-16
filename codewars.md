@@ -159,3 +159,12 @@ Test.assertEquals(numberToString(67), '67');
   });
 });
 ```
+
+## Convert stringToNumber
+
+```sh
+const stringToNumber = (s) => {
+   return Number(s)
+}
+```
+
