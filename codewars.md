@@ -168,3 +168,35 @@ const stringToNumber = (s) => {
 }
 ```
 
+## Sum of positive
+
+```sh
+function positiveSum(arr) {
+    let res=0;
+    for (let i=0; i<arr.length; i++){
+    if (arr[i] > 0 ){
+      res += arr[i]
+    }
+  } 
+    return res;
+ }
+console.log(positiveSum([1,-2, 6,2,8,-10]));
+```
+
+Test 
+
+```sh
+const { assert } = require("chai")
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(positiveSum([1,2,3,4,5]),15);
+    assert.strictEqual(positiveSum([1,-2,3,4,5]),13);
+    assert.strictEqual(positiveSum([]),0);
+    assert.strictEqual(positiveSum([-1,-2,-3,-4,-5]),0);
+    assert.strictEqual(positiveSum([-1,2,3,4,-5]),9);
+    });
+  });
+  ```
+
+  result :17
