@@ -183,6 +183,13 @@ function positiveSum(arr) {
 console.log(positiveSum([1,-2, 6,2,8,-10]));
 ```
 
+```sh
+function positiveSum(arr) {
+  return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+}
+console.log(positiveSum([1,2,-3]));
+```
+
 Test 
 
 ```sh
@@ -199,4 +206,4 @@ describe("Basic tests", () => {
   });
   ```
 
-  result :17
+
