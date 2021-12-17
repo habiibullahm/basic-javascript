@@ -206,4 +206,36 @@ describe("Basic tests", () => {
   });
   ```
 
+## Abbreviate a Two Word Name
 
+```sh
+function abbrevName(name){
+   let res= name;
+   res = res.split(" ");
+   res = res.map(item => {
+      console.log(item[0]);
+      return item[0].toUpperCase()
+   }) 
+   res = res.join(".")
+   return res; 
+   
+}
+```
+
+Test
+
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(abbrevName("Sam Harris"), "S.H");
+    assert.strictEqual(abbrevName("Patrick Feenan"), "P.F");
+    assert.strictEqual(abbrevName("Evan Cole"), "E.C");
+    assert.strictEqual(abbrevName("P Favuzzi"), "P.F");
+    assert.strictEqual(abbrevName("David Mendieta"), "D.M");
+  });
+});
+```
