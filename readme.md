@@ -1,336 +1,274 @@
-## add
+## Count of positives / sum of negatives
+
+Given an array of integers.
+
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+
+If the input array is empty or null, return an empty array.
+
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
 ```sh
-const money = 1 + 3
-console.log(money)
+function countPositivesSumNegatives(input) {
+  if (input === null || input.length === 0) {
+    return [];
+  }
+  let countPositives = 0;
+  let sumNegatives = 0;
+  input.map((data) => {
+    if (data > 0) {
+      countPositives++;
+    } else if (data < 0) {
+      sumNegatives = sumNegatives + data 
+    }
+  });
+  return [countPositives, sumNegatives];
+}
 ```
-result : 4
+Test 
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
 
-## subtract
+describe("Example tests", () => {
+  it("Testing for fixed test 1", () => {
+    let testData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+    let actual = countPositivesSumNegatives(testData);
+    let expected = [10, -65];
+    assert.deepEqual(actual, expected);
+  })
+    
+  it("Testing for fixed test 1", () => {
+    let testData = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
+    let actual = countPositivesSumNegatives(testData);
+    let expected = [8, -50];    
+    assert.deepEqual(actual, expected);
+  });
+});
+```
+## Create Phone Number
 
 ```sh
-const cash = 10 - 1
-console.log(cash)
+function createPhoneNumber(numbers) {
+  if (numbers.length !== 10 ) {
+      return "harus 10 angka"
+  }
+  let result = "";
+  for (let i = 0; i < numbers.length; i++) {
+    switch (i) {
+      case 0:
+        result = "(" + numbers[i];
+        break;
+      case 3:
+        result += ") " + numbers[i];
+        break;
+      case 6:
+        result += "-" + numbers[i];
+        break;
+      default:
+        result += numbers[i];
+        break;
+    }
+  }
+  return result;
+}
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(createPhoneNumber(data));
 ```
-
-result : 9
-
-## multiply
-
 ```sh
-const height = 2 * 2
-console.log(height)
+function createPhoneNumber(numbers) {
+  if (numbers.length !== 10 ) {
+    return "harus 10 angka"
+  } 
+  let result = "";
+  for (let i = 0; i < numbers.length; i++) {
+    if (i === 0 ) {
+        result = "(" + numbers[i]
+    } else if (i === 3) {
+        result += ") " + numbers[i]
+    } else if (i === 6) {
+        result += "-" + numbers[i]
+    } else {
+        result += numbers[i]
+    }
+  }
+  return result;
+}
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(createPhoneNumber(data));
 ```
 
-result : 4
 
-## remainder (modulo)
-```sh
-const remainder = 11 % 3 ;
-console.log(remainder);
-```
-result : 2 
-
-## Compound Assignment With Augmented Addition
-```sh
-let a = 35;
-let b = 11;
-let c = 4;
-
-a += 2;
-b += 5;
-c += 9;
-```
-result :
-a : 37
-b : 16
-c : 13
-
-## Compound Assignment With Augmented subtraction
-```sh
-let a = 1;
-let b = 5;
-let c = 2;
-
-// Only change code below this line
-a -= 1;
-b -= 4;
-c -= 2;
-```
-result :
-a : 0
-b : 1
-c : 0
-## Compound Assignment With Augmented Multiplication
-```sh
-let a = 5;
-let b = 2;
-let c = 2;
-
-a *= 2;
-b *= 6;
-c *= 20;
-```
-result : 
-a : 10
-b : 12
-c : 40
-## Compound Assignment With Augmented Division
-```sh
-let a = 9;
-let b = 6;
-let c = 3;
-
-a /= 3;
-b /= 2;
-c /= 1;
-```
-
-result : 
-a : 3
-b : 3
-c : 3
-
-## Escaping Literal Quotes in Strings
-```sh
-const myStr = "I am a \"double quoted\" string inside \"double qoutes\"."; 
-```
-
-result : myStr = "I am a "double quoted" string inside "double qoutes"."
-
-## Quoting Strings with Single Quotes
-```sh
-const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
-```
-## ! String template 
-```sh
-let myName : "habib";
-console.log(`${myName} belajar di glints academy`;
-```
-result : habib belajar di glints academy
-
-## parseInt
-
-```sh
-console.log(parseInt("100.1"));
-```
-
-result : 100
-         
-## parseFloat
-
-```sh
-console.log(parseFloat("100.1));
-```
-
-result : 100,1
-
-## string data type
-
-```sh
-let myName = "Habib";
-console.log(typeof myName);
-```
-
-result : string
-
-## number data type
-
-```sh
-let  money = 100;
-console.log(typeof money);
-```
-result : number
-
-## boolean data type
-
-```sh
-let aku sedang bekerja = false ;
-console.log(typeof aku sedang bekerja);
-```
-
-result : boolean
-
-## NaN
-
-```sh
-let myJob = Number('ngooding11');
-console.log(myJob);
-```
-
-result : NaN
-
-## isNaN
-
-```sh
-console.log(isNaN(5));
-```
-
-result : False (Karna 5 adalah angka)
-
-## Ternary Operator
-
-```sh
-const score = "C";
-const hasil = score === "A" ? 'Cie dapat A' : 'Gapapa deh ;('
-console.log(hasil);
-```
-
-result : Gapapa deh ;( 
-
-## Concat with plus operator
-
-```sh
-let myStr = "This is the first sentence. ";
-myStr += "This is the second sentence.";
-console.log(myStr);
-```
-
-## append to string
-```sh
-const someAdjective = "Fun, Interesting, Boring";
-let myStr = "Learning to code is ";
-myStr += someAdjective
-```
-
-## Find the Length of a String
-
-```sh
-let lastNameLength = 0;
-const lastName = "Lovelace";
-lastNameLength = lastName.length;
-```
-
-## Find the First Character
-```sh
-let firstLetterOfLastName = "";
-const lastName = "Lovelace";
-firstLetterOfLastName = lastName[0]; 
-```
-
-result : L 
-
-## Find the Last Character
-
-```sh
-const lastName = "Lovelace";
-const lastLetterOfLastName = lastName[lastName.length - 1]; 
-```
-
-result : e
+result : (123) 456-7890
 
 ## Remove First and Last Character
-
 ```sh
-function removeChar (str) {
-    return str.slice(1,-1)
+function removeChar(str) {
+  return str.slice(1, -1);
 }
-let nama = 'habib';
-console.log(removeChar(nama))
 ```
+Test
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
 
-result : abi
-
-## World Blanks
+describe("Tests", () => {
+  it("Fixed Tests", () => {
+    assert.strictEqual(removeChar('eloquent'), 'loquen');
+    assert.strictEqual(removeChar('country'), 'ountr');
+    assert.strictEqual(removeChar('person'), 'erso');
+    assert.strictEqual(removeChar('place'), 'lac');
+    assert.strictEqual(removeChar('ooopsss'), 'oopss');
+  });
+});
+```
+## String repeat
 
 ```sh
-const myNoun = "dog";
-const myAdjective = "big";
-const myVerb = "ran";
-const myAdverb = "quickly";
-
-const wordBlanks = myNoun + " " + myAdjective + " " + myVerb + " "+ myAdverb;
-```
-
-## Nested array
-
-```sh
-const myArray = [["habib", 23], ["unis", 20]];
-```
-
-## access array data
-
-```sh
-const myArray = [50, 60, 70];
-let myData = myArray[myArray.length-1];
-```
-
-## modify array data with indexes
-```sh
-const myArray = [18, 64, 99];
-myArray[0] = 45
-```
-
-## Access Multi-Dimensional Arrays With Indexes
-
-```sh
-const myArray = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-  [[10, 11, 12], 13, 14],
-];
-
-const myData = myArray[2][1];
-```
-
-result : 8 
-mengakses array index 2 yaitu : [7,8,9]
-lalu mengakses array index 1 : 8
-
-## Manipulate Arrays With push()
-
-```sh
-const myArray = [["John", 23], ["cat", 2]];
-myArray.push(["dog", 3]);
-```
-result : [["John", 23], ["cat", 2], ["dog", 3]]
-
-## Manipulate Arrays With pop()
-
-```sh
-const myArray = [["John", 23], ["cat", 2]];
-const removedFromMyArray =myArray.pop()
-```
-
-## Manipulate Arrays With shift()
-
-```sh
-const myArray = [["John", 23], ["dog", 3]];
-const removedFromMyArray = myArray.shift()
-console.log(myArray);
-```
-
-result : [["dog", 3]]
-
-## Manipulate Arrays With unshift()
-shift : Menghapus data elemen pertama
-unshift : Menambahkan data di elemen pertama
-```sh
-const myArray = [["John", 23], ["dog", 3]];
-myArray.shift(); 
-myArray.unshift(["Paul", 35])
-```
-
-result : [["Paul", 35], ["dog", 3]]
-
-## Shopping List
-
-```sh
-const myList = [
-  ["myName", 1], 
-  ["myAge", 23],
-  ["myJob", 10],
-  ["myHome", 12],
-  ["myCampus", 5],
-];
-```
-
-## Write Reusable JavaScript with Functions
-
-```sh
-function reusableFunction(){
-  console.log("Hi World")
+function repeatStr (n, s) {
+    return s.repeat(n)
 }
-reusableFunction()
 ```
+Test :
+```sh
+describe("Tests", function() {
+  it ("Basic tests", function() {
+    Test.assertSimilar(repeatStr(3, "*"), "***");
+    Test.assertSimilar(repeatStr(5, "#"), "#####");
+    Test.assertSimilar(repeatStr(2, "ha "), "ha ha ");
+  });
+});
+```
+
+## Convert a Number to a String!
+
+```sh
+function numberToString(num="") {
+    return `${num}`
+}
+```
+
+Test
+```sh
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(numberToString(67), '67');
+  });
+});
+```
+
+## Convert stringToNumber
+
+```sh
+const stringToNumber = (s) => {
+   return Number(s)
+}
+```
+
+## Sum of positive
+
+```sh
+function positiveSum(arr) {
+    let res=0;
+    for (let i=0; i<arr.length; i++){
+    if (arr[i] > 0 ){
+      res += arr[i]
+    }
+  } 
+    return res;
+ }
+console.log(positiveSum([1,-2, 6,2,8,-10]));
+```
+
+```sh
+function positiveSum(arr) {
+  return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+}
+console.log(positiveSum([1,2,-3]));
+```
+
+Test 
+
+```sh
+const { assert } = require("chai")
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(positiveSum([1,2,3,4,5]),15);
+    assert.strictEqual(positiveSum([1,-2,3,4,5]),13);
+    assert.strictEqual(positiveSum([]),0);
+    assert.strictEqual(positiveSum([-1,-2,-3,-4,-5]),0);
+    assert.strictEqual(positiveSum([-1,2,3,4,-5]),9);
+    });
+  });
+  ```
+
+## Abbreviate a Two Word Name
+
+```sh
+function abbrevName(name){
+   let res= name;
+   res = res.split(" ");
+   res = res.map(item => {
+      console.log(item[0]);
+      return item[0].toUpperCase()
+   }) 
+   res = res.join(".")
+   return res; 
+   
+}
+```
+
+Test
+
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(abbrevName("Sam Harris"), "S.H");
+    assert.strictEqual(abbrevName("Patrick Feenan"), "P.F");
+    assert.strictEqual(abbrevName("Evan Cole"), "E.C");
+    assert.strictEqual(abbrevName("P Favuzzi"), "P.F");
+    assert.strictEqual(abbrevName("David Mendieta"), "D.M");
+  });
+});
+```
+## Reverse String 
+
+```sh
+function solution(s){
+   let res = '';
+   
+   for (let i = s.length - 1; i >= 0; i--){
+      res = res + s[i];
+      console.log("res", res);
+      console.log("i", i);
+   }   
+   return res;
+ }
+ console.log(solution("Tamala"));
+```
+
+Test
+
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(solution('world'), 'dlrow');
+    assert.strictEqual(solution('hello'), 'olleh');
+    assert.strictEqual(solution(''), '');
+    assert.strictEqual(solution('h'), 'h');
+  });
+}); 
+```
+result : alamat
