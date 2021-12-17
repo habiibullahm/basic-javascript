@@ -239,7 +239,7 @@ describe("Basic tests", () => {
   });
 });
 ```
-## Reverse String
+## Reverse String 
 
 ```sh
 function solution(s){
@@ -252,6 +252,7 @@ function solution(s){
    }   
    return res;
  }
+ console.log(solution("Tamala"));
 ```
 
 Test
@@ -270,3 +271,4 @@ describe("Basic tests", () => {
   });
 }); 
 ```
+result : alamat
