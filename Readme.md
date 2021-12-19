@@ -337,3 +337,43 @@ describe("howMuchILoveYou",function() {
 
 result: I love you
 
+## minmax
+
+```sh
+function minMax(arr){
+   let min = arr[0];
+   let max = arr[0];
+   for (let i = 1; i<arr.length; i++){
+      console.log(`saat ini max adalah = ${max}, lalu dibandingkan dengan ${arr[i]}`);
+      console.log(`saat ini min adalah =${min}, lalu di bandingkan dengan ${arr[i]}`);
+      if (arr[i]>max){
+         max=arr[i]
+      }
+      if (arr[i]<min){
+         min=arr[i]
+      }
+   }
+   return [min,max]; 
+ }
+```
+
+Test
+
+```sh
+var test = function(arr, res){
+  Test.assertSimilar(minMax(arr), res, "tested on " + JSON.stringify(arr) + ":");
+};
+
+describe("minMax", function(){
+  it("should work for some examples", function(){
+    var i, r;
+    test([1,2,3,4,5], [1,5]);
+    test([2334454,5], [5, 2334454]);
+    
+    for(i = 0; i < 20; ++i){
+      r = Math.random();
+      test([r], [r,r]);
+    }   
+  });
+});
+```
