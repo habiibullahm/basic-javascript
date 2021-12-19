@@ -272,3 +272,35 @@ describe("Basic tests", () => {
 }); 
 ```
 result : alamat
+
+## Check isDevideBy
+
+```sh
+const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
+console.log(isDivideBy(4, 1, 4));
+```
+
+Test 
+
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Basic tests",function(){
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(isDivideBy(8, 2, 4), true);
+    assert.strictEqual(isDivideBy(12, -3, 4), true);
+    assert.strictEqual(isDivideBy(8, 3, 4), false);
+    assert.strictEqual(isDivideBy(5, 2, -2), false);
+    assert.strictEqual(isDivideBy(-100, -25, 10), true);
+    assert.strictEqual(isDivideBy(10000, 5, -3), false);
+    assert.strictEqual(isDivideBy(4, 4, 2), true);
+    assert.strictEqual(isDivideBy(5, 2, 3), false);
+    assert.strictEqual(isDivideBy(-96, 25, 17), false);
+    assert.strictEqual(isDivideBy(33, 1, 33), true);
+  })
+})
+```
+
+result : True
