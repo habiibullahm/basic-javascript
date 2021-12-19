@@ -377,3 +377,28 @@ describe("minMax", function(){
   });
 });
 ```
+
+## Middle Character
+jika ganjil menampilkan 1 character tengah
+jika genap menampilkan 2 character tengah
+```sh
+function getMiddle(s){
+   if (s.length %2 ===0){
+      return `${s[(s.length/2)-1]}${s[s.length/2]}`
+   } else {
+      return s[Math.floor(s.length/2)]
+   }
+}
+```
+
+Test
+```sh
+describe("GetMiddle", function() {
+  it("Tests", function() {
+    Test.assertEquals(getMiddle("test"),"es");
+    Test.assertEquals(getMiddle("testing"),"t");
+    Test.assertEquals(getMiddle("middle"),"dd");
+    Test.assertEquals(getMiddle("A"),"A");
+  });
+})
+```
