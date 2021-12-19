@@ -304,3 +304,36 @@ describe("Basic tests",function(){
 ```
 
 result : True
+
+## petals
+
+```sh
+function howMuchILoveYou(nbPetals) {
+   let word = ["not at all", "I love you", "a little", "a lot", "passionately", "madly"]
+   let res;
+   if (nbPetals>0){
+      return res= word[nbPetals%6]
+   } 
+   return res;
+}
+console.log(howMuchILoveYou(7));
+```
+
+Test
+
+```sh
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("howMuchILoveYou",function() {
+  it("Basic tests",function() { 
+    assert.strictEqual(howMuchILoveYou(7),"I love you")
+    assert.strictEqual(howMuchILoveYou(3),"a lot")
+    assert.strictEqual(howMuchILoveYou(6),"not at all")
+  });
+})
+```
+
+result: I love you
+
