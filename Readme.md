@@ -427,3 +427,33 @@ describe("Basic tests",() =>{
 });
 ```
 
+## Summing a number's digits
+
+```sh
+function sumDigits(number){
+   let res = 0;
+   String(number).split('').forEach(item=>{
+      if (Number(item)>0){
+         res += Number(item);
+      }
+      console.log((item));
+   })
+   return res;
+}
+```
+
+Test:
+
+```sh
+const { assert } = require("chai")
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(sumDigits(10), 1);
+    assert.strictEqual(sumDigits(99), 18);
+    assert.strictEqual(sumDigits(-32), 5);
+    })
+  })
+```
+
+
