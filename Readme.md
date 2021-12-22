@@ -529,7 +529,7 @@ function removeSmallest(numbers) {
   angka.splice(key,1);
   return angka;
 }
-console.log(removeSmallest([2,2,1,2,]));
+console.log(removeSmallest([2,2,1,2,1]));
 ```
 
 Test
@@ -565,3 +565,32 @@ describe("removeSmallest", function() {
 ```
 
 result: [ 2, 2, 2, 1 ] 
+
+## Counting sheep...
+
+```sh
+ function countSheeps(arrayOfSheep) {
+   let hitung = 0
+   for(let i = 0; i < arrayOfSheep.length; i++) {
+       if(arrayOfSheep[i]) hitung += 1
+   }
+   return hitung
+}
+```
+
+Test:
+
+```sh
+describe("Tests", () => {
+  it("test", () => {
+var array1 = [true,  true,  true,  false,
+              true,  true,  true,  true ,
+              true,  false, true,  false,
+              true,  false, false, true ,
+              true,  true,  true,  true ,
+              false, false, true,  true ];
+              
+Test.assertEquals(countSheeps(array1), 17, "There are 17 sheeps in total")
+  });
+});
+```
