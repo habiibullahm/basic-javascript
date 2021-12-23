@@ -594,3 +594,39 @@ Test.assertEquals(countSheeps(array1), 17, "There are 17 sheeps in total")
   });
 });
 ```
+## object--toString() and toLocaleString()
+
+```sh
+function colorOf(r,g,b){
+   r= r.toString(16)
+   if(r.length===1){
+      r=`0${r}`
+   } 
+   g=g.toString(16)
+   if(g.length===1){
+      g=`0${g}`
+   }
+   b=b.toString(16)
+   if(b.length===1){
+      b=`0${b}`
+   }
+
+
+return `#${r}${g}${b}`
+}
+```
+
+Test
+
+```sh
+describe("Tests", () => {
+  it("test", () => {
+    Test.assertSimilar(colorOf(255,0,0), "#ff0000");
+    showColor("#ff0000")
+    Test.assertSimilar(colorOf(0,111,0), "#006f00");
+    showColor("#006f00")
+    Test.assertSimilar(colorOf(1, 2 ,3), "#010203");
+    showColor("#010203")
+  });
+});
+```
