@@ -610,8 +610,6 @@ function colorOf(r,g,b){
    if(b.length===1){
       b=`0${b}`
    }
-
-
 return `#${r}${g}${b}`
 }
 ```
@@ -627,6 +625,33 @@ describe("Tests", () => {
     showColor("#006f00")
     Test.assertSimilar(colorOf(1, 2 ,3), "#010203");
     showColor("#010203")
+  });
+});
+```
+
+## What's the real floor?
+
+```sh
+function getRealFloor(n) {
+   let floor=n;
+   if(floor>0){
+      floor--
+   } 
+   if (floor>=13){
+      floor--
+   }
+   return floor
+}
+```
+
+Test
+
+```sh
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(getRealFloor(1), 0);
+Test.assertEquals(getRealFloor(5), 4);
+Test.assertEquals(getRealFloor(15), 13);
   });
 });
 ```
