@@ -265,5 +265,188 @@
 // }
 // console.log(isDevideBy(15, 4, 3));
 
+// function howMuchILoveYou(n) {
+//    let word = ["I love you", "a little","a lot","passionately","madly","not at all",]
+//    let d=0
+//  if (n%6==0) d =6
+//  else d=n%6
+//    n%6 ==0 ? d=6 : d=n%6
+//    return word[d-1]
+// }
+
+// console.log(howMuchILoveYou(6));
+
+// function howMuchILoveYou(nbPetals) {
+//    let word = ["not at all", "I love you", "a little", "a lot", "passionately", "madly"]
+//    let res;
+//    if (nbPetals>0){
+//       return res= word[nbPetals%6]
+//    }
+//    return res;
+// }
+
+//## MinMAx
+ 
+// function minMax(arr){
+//    return [Math.min(...arr), Math.max(...arr)];
+//  }
+
+// console.log(minMax([1,2,3,-1,4]));
+
+// function getMiddle(s){
+// 1.menentukan word.length adalah ganiil/genap
+// 2.menampilkan 1 karakter di tengah jika ganjil
+// 3.menampilkan 2 karakter jika di genap
+//    if (s.length %2 ===0){
+//       console.log("genap");
+//       return `${s[(s.length/2)-1]}${s[s.length/2]}`
+//       // return `${s[2]}${s[3]}`
+//    } else {
+//       console.log("ganjil");
+//       return s[Math.floor(s.length/2)]
+//    }
+// }
+// console.log(getMiddle("middle"));
+
+// ## remove string space
+
+// function noSpace(x){
+//    return x.split(' ').join('')
+//  }
+
+//  console.log(noSpace("h a b i b"));
+
+// function sumDigits(number){
+//    let res = 0;
+//    String(number).split('').forEach(item=>{
+//       if (Number(item)>0){
+//          res += Number(item);
+//       }
+//       console.log((item));
+//    })
+//    return res;
+// }
+// console.log(sumDigits(99));
+
+// function sumDigits(number) {
+//    return Math.abs(number).toString().split('').reduce(function(a,b){return +a + +b}, 0);
+//  }
+
+//  console.log(sumDigits(-32));
+
+// function highAndLow(numbers){
+//    let angka = numbers.split(' ')
+
+//    return `${Math.max(...angka)} ${Math.min(...angka)}`;
+//  }
+
+//  console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+// ## remove smallest
+
+// function removeSmallest(numbers) {
+//   let baru = [];
+//   for (let k = 0; k < numbers.length; k++) baru[k] = numbers[k];
+
+//   let key = 0;
+//   for (let i = 0; i < baru.length; i++) {
+//     if (baru[key] > baru[i]) {
+//       key = i;
+//     }
+//   }
+//   baru.splice(key, 1);
+//   return baru;
+// }
+
+// const removeSmallest = numbers => numbers.filter((n,i) => i !== numbers.indexOf(Math.min(...numbers)));
+// console.log(removeSmallest([2,2,1,2,1]));
+
+// ## smallest integer
+// class SmallestIntegerFinder{
+//    findSmallestInt(args) {
+//      return Math.min(...args)
+//    }
+// }  
+
+// ## Methods of Number object--toString() and toLocaleString()
+
+// algo:
+// 1. deklarasi warna 
+// 2. mengconvert parameter k string(16)
+// function colorOf(r,g,b){
+//    r.toString(16).length<2 ? r=='0' + r.toString(16) : r= r.toString(16);
+//    g.toString(16).length<2 ? r=='0' + g.toString(16) : r= g. toString(16)
+//    b.toString(16).length<2 ? b=='0' + b.toString(16) : b = b.toString(16);
+
+//    return '#'+r+g+b;
+// }
+
+// console.log(colorOf(255,0,0));
 
 
+// ## counting ship 
+
+//  function countSheeps(arrayOfSheep) {
+//    let hitung = 0
+//    for(let i = 0; i < arrayOfSheep.length; i++) {
+//        if(arrayOfSheep[i]) hitung += 1
+//    }
+//    return hitung
+// }
+
+// class SmallestIntegerFinder {
+//    findSmallestInt(args) {
+//    return Math.min(...args) 
+    
+//    }
+//  }
+// let small = new SmallestIntegerFinder
+// console.log(small.findSmallestInt([34, 15, 88, 2]))
+
+// function colorOf(r,g,b){
+//    r= r.toString(16)
+//    if(r.length===1){
+//       r=`0${r}`
+//    } 
+//    g=g.toString(16)
+//    if(g.length===1){
+//       g=`0${g}`
+//    }
+//    b=b.toString(16)
+//    if(b.length===1){
+//       b=`0${b}`
+//    }
+
+
+// return `#${r}${g}${b}`
+// }
+// console.log(colorOf(255,0,0));
+
+// 
+
+class Ongkir {
+   #ongkir;
+   #berat
+   constructor(berat = 0) {
+     this.#berat = berat;
+     this.#ongkir = this.berat * 5000; // Abstraction - Hide the details
+   }
+ 
+   getBerat() {
+     return this.#berat;
+   }
+ 
+   setBerat(berat) {
+       this.#berat = berat
+   }
+ 
+   hitungOngkir() {
+     return this.#ongkir;
+   }
+ }
+ 
+ let ongkir1 = new Ongkir(2);
+ console.log(ongkir1.berat);
+ console.log(ongkir1.setBerat(4));
+ console.log(ongkir1.getBerat());
+ console.log(ongkir1.hitungOngkir());
