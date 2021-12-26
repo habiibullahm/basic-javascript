@@ -655,3 +655,22 @@ Test.assertEquals(getRealFloor(15), 13);
   });
 });
 ```
+##  create your first JS function 
+
+```sh
+function helloWorld(str){
+   var str = "Hello World!";
+
+   console.log(str)
+}
+```
+Test
+
+```sh
+describe("Tests", () => {
+  it("test", () => {
+Test.expect(helloWorld, "function helloWorld is not defined")
+helloWorld();
+  });
+});
+```
