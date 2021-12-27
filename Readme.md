@@ -674,3 +674,20 @@ helloWorld();
   });
 });
 ```
+## Evens times last
+
+```sh
+function evenLast(n) {
+   return n.length!=0?  (n.filter((e, i) => {  return i % 2 == 0; }).reduce((a,b)=>a+b,0))*n[n.length-1] : 0
+ }
+```
+
+test
+
+```sh
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(evenLast([2, 3, 4, 5]), 30)
+  });
+});
+```
