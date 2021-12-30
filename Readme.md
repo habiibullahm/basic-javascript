@@ -691,3 +691,35 @@ Test.assertEquals(evenLast([2, 3, 4, 5]), 30)
   });
 });
 ```
+## Methods of String object--slice()
+
+```sh
+function cutIt(arr){
+   
+   let lowestLength;
+   //step 1 mengambil length terkecil dari array
+   for (let i = 0; i<arr.length; i++){
+      if(lowestLength>arr[i].length || !lowestLength){
+         lowestLength = arr[i].length
+      }
+      
+   }
+   
+   return arr.map(item=>item.slice(0,lowestLength))
+   
+   // console.log(arr[2].slice(0,2));
+}
+```
+
+Test
+
+```sh
+describe("Tests", () => {
+  it("test", () => {
+    Test.assertSimilar(cutIt(["ab","cde","fgh"]) , ["ab","cd","fg"]);
+    Test.assertSimilar(cutIt(["abc","defgh","ijklmn"]) , ["abc","def","ijk"]);
+    Test.assertSimilar(cutIt(["codewars","javascript","java"]) , ["code","java","java"]);
+
+  });
+});
+```
