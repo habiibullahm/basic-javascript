@@ -286,7 +286,7 @@
 // }
 
 //## MinMAx
- 
+
 // function minMax(arr){
 //    return [Math.min(...arr), Math.max(...arr)];
 //  }
@@ -366,12 +366,12 @@
 //    findSmallestInt(args) {
 //      return Math.min(...args)
 //    }
-// }  
+// }
 
 // ## Methods of Number object--toString() and toLocaleString()
 
 // algo:
-// 1. deklarasi warna 
+// 1. deklarasi warna
 // 2. mengconvert parameter k string(16)
 // function colorOf(r,g,b){
 //    r.toString(16).length<2 ? r=='0' + r.toString(16) : r= r.toString(16);
@@ -383,8 +383,7 @@
 
 // console.log(colorOf(255,0,0));
 
-
-// ## counting ship 
+// ## counting ship
 
 //  function countSheeps(arrayOfSheep) {
 //    let hitung = 0
@@ -396,8 +395,8 @@
 
 // class SmallestIntegerFinder {
 //    findSmallestInt(args) {
-//    return Math.min(...args) 
-    
+//    return Math.min(...args)
+
 //    }
 //  }
 // let small = new SmallestIntegerFinder
@@ -407,7 +406,7 @@
 //    r= r.toString(16)
 //    if(r.length===1){
 //       r=`0${r}`
-//    } 
+//    }
 //    g=g.toString(16)
 //    if(g.length===1){
 //       g=`0${g}`
@@ -417,36 +416,102 @@
 //       b=`0${b}`
 //    }
 
-
 // return `#${r}${g}${b}`
 // }
 // console.log(colorOf(255,0,0));
 
-// 
+//
 
-class Ongkir {
-   #ongkir;
-   #berat
-   constructor(berat = 0) {
-     this.#berat = berat;
-     this.#ongkir = this.berat * 5000; // Abstraction - Hide the details
-   }
- 
-   getBerat() {
-     return this.#berat;
-   }
- 
-   setBerat(berat) {
-       this.#berat = berat
-   }
- 
-   hitungOngkir() {
-     return this.#ongkir;
-   }
- }
- 
- let ongkir1 = new Ongkir(2);
- console.log(ongkir1.berat);
- console.log(ongkir1.setBerat(4));
- console.log(ongkir1.getBerat());
- console.log(ongkir1.hitungOngkir());
+// function cutIt(arr){
+//    let res = 0
+//    //step 1, cari leng paling kecil dari arr
+//    for (let i=0; i<arr.length; i++){
+//       if(arr[i]<arr[i-1]){
+//          res =[arr[i]]
+//       }
+//    }
+
+//    return res
+//  }
+
+//  console.log(cutIt(["ab","cde","f"]));
+
+// function evenLast(n) {
+//    return n.length!=0?  (n.filter((e, i) => {  return i % 2 == 0; }).reduce((a,b)=>a+b,0))*n[n.length-1] : 0
+//  }
+
+// function evenLast(n){
+//    if (n.length<1){
+//       return 0
+//    }
+//    let evenValue=0
+
+//    for (let i=0; i<n.length; i++){
+//       if(n[i]%2 === 0){
+//          evenValue += n[i]
+//       }
+
+//    }
+//    return evenValue*n[n.length-1]
+// }
+
+// console.log(evenLast([2,3,4,5]));
+
+// ##
+// function cutIt(arr){
+
+//    let lowestLength;
+   //step 1 mengambil length terkecil dari array
+//    for (let i = 0; i<arr.length; i++){
+//       if(lowestLength>arr[i].length || !lowestLength){
+//          lowestLength = arr[i].length
+//       }
+
+//    }
+
+//    return arr.map(item=>item.slice(0,lowestLength))
+
+   // console.log(arr[2].slice(0,2));
+// }
+
+//  console.log(cutIt(["ab","cde","fgh"]));
+
+//  function cutIt(arr){
+//    const minLength = Math.min(...arr.map(x => x.length));
+//    return arr.map(x => x.slice(0, minLength));
+
+// ##
+// function removeUrlAnchor(url){
+//    let indexAnchor=url.indexOf("#")
+
+//    console.log(indexAnchor);
+//    return indexAnchor > 0 ? url.slice(0,indexAnchor) : url
+// }
+
+// console.log(removeUrlAnchor("www.codewars.com/user/about"));
+
+// ## Reverse words
+// function reverseWords(str) {
+//    return str.split(' ').map(item=>item.split('').reverse().join('')).join(' ')
+//  }
+
+//  console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+
+// ## Count characters in your string
+
+// function count(string) {
+//   let result = {};
+//   string.split("").forEach((item) => {
+//     if (!result[item]) {
+//       result[item] = 1;
+//     } else {
+//       result[item] += 1;
+//     }
+//   });
+//   return result;
+// }
+// console.log(count("aba"));
+
+// ##
+
+
