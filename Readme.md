@@ -1,4 +1,4 @@
-Codewars test case !
+CODEWARS TEST CASE !
 
 ## Count of positives / sum of negatives
 

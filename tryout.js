@@ -1,21 +1,21 @@
-// function myFunction(x) {
-//     return  x.replace()
-// }
+function myFunction(x) {
+    return  x.replace()
+}
 
 // console.log(myFunction("http://github.com/subagyo/project-mantab")); 
 
-// function FindIntersection(strArr) { 
+function FindIntersection(strArr) { 
 
-//     let a = strArr[0].split(', ')
-//     let b = strArr[1].split(', ')
-//     let result = a.filter(x => b.find(a=> a===x))
+    let a = strArr[0].split(', ')
+    let b = strArr[1].split(', ')
+    let result = a.filter(x => b.find(a=> a===x))
 
-//     return result.length > 0 ? result.join(',') : 'false' 
+    return result.length > 0 ? result.join(',') : 'false' 
   
-//   }
+  }
      
-  // keep this function call here 
-//   console.log(FindIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]));
+//   keep this function call here 
+  console.log(FindIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]));
 
 function countUnique(arr) {
 
@@ -31,4 +31,17 @@ function countUnique(arr) {
     return UniqueValue.length
 }
 
-console.log(countUnique([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
+// console.log(countUnique([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
+
+hitungAngkaUnik = (arr) =>{
+    let res = 0;
+    for (let i =0; i<= arr.length; i++){
+        if (arr[i] !== arr[i+1])
+        // res.push(arr[i])
+        res ++
+    }
+
+    return res
+}
+
+// console.log(hitungAngkaUnik([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
