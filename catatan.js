@@ -45,33 +45,34 @@ function checkGanjilGenap(listNilai){
             console.log(nilai, "genap", ": *** ");
         } else {
             hitungGanjil += nilai
-            console.log(nilai, "ganjil");
         }
     })
 
     return [hitungGanjil, hitungGenap]
 }
 
-console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
+// console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 
-// ## create phone number
+//  ## create phone number
 
-// function createPhoneNumber(numbers) {
-//     console.log("createPhoneNumber");
-//   let result = "";
-//   for (let i = 0; i < numbers.length; i++) {
-//     if (i === 0 ) {
-//         result = "(" + numbers[i]
-//     } else if (i === 3) {
-//         result += ") " + numbers[i]
-//     } else if (i === 6) {
-//         result += "-" + numbers[i]
-//     } else {
-//         result += numbers[i]
-//     }
-//   }
-//   return result;
-// }
+createPhoneNumber = (numbers) =>{
+   let result = "";
+   for(let i = 0; i<numbers.length; i++){
+      if(i === 0){
+         result = "(" + numbers[i]
+      } else if(i === 3){
+         result += ") " + numbers[i]
+      } else if(i === 6){
+         result += "-" + numbers[i]
+      } else{
+         result += numbers[i]
+      }
+   }
+   return result
+}
+
+// let data = [0,3,6,1,3,4,5,6,7,7,4,2,2,]
+// console.log(createPhoneNumber(data));
 
 // function createPhoneNumber(numbers) {
 // if (numbers.length !== 10 ) {
@@ -100,21 +101,23 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 // console.log(createPhoneNumber(data));
 
 // ## \n
-// const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// let fLen = fruits.length;
 
-// text = "";
+addLine = (str) =>{
+   let result = ""
+   for(let i =0; i <str.length; i++){
+      if(str[i]){
+         result += str[i] + "\n"
+      }
+   }
+   return result;
+}
 
-// for (let i = 0; i < fLen; i++) {
-//   text += fruits[i] + "\n";
-// }
-// text += "";
-
-// console.log(text)
+// let data = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(addLine(data));
 
 // ## removes Character
 
-// str = 'AppDividend';
+let str = 'AppDividend';
 // console.log('Original String: ', str);
 
 // removeFirstChar = str.slice(1);
@@ -130,6 +133,12 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 // let nama = "habib";
 // console.log(removeChar(nama));
 
+// function removeChar (str) {
+//    return str.slice(1, -1)
+// }
+// let nama = 'habib'
+// console.log(removeChar(nama))
+
 // function multiply (a,b) {
 //     return a*b
 //     }
@@ -140,11 +149,7 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 // return a*b
 // }
 
-// function removeChar (str) {
-//    return str.slice(1,-1)
-// }
-// let nama = 'habib'
-// console.log(removeChar(nama))
+
 
 // const myNoun = "dog";
 // const myAdjective = "big";
@@ -160,52 +165,57 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 // console.log(myData);
 
 // Setup
-// const myArray = [["John", 23], ["dog", 3]];
-// const removedFromMyArray = myArray.shift()
+// const myArray = [["habib",25],["nahsrul", 32]];
+// const removedFromMyArray = myArray.pop()
 // console.log(removedFromMyArray);
 // console.log(myArray);
 
-// function repeatStr(n, s) {
-//   let res ="";
-//   for (i = 0; i<n; i++) {
-//     res += res ;
-//   }
-//   return res;
-// }
-// console.log(repeatStr(5, "data"));
-// // console.log(repeatStr(2, "hallo"));
+function repeatStr(n, s) {
+  let res ="";
+  for (i = 0; i<n; i++) {
+    res += res ;
+  }
+  return res;
+}
+// console.log(repeatStr(5, " data"));
+// console.log(repeatStr(2, " hallo"));
 
-// function repeatStr (n, s) {
-//      return s.repeat(n)
-//    }
+function repeatStr (n, s) {
+     return s.repeat(n, s)
+   }
+   // console.log(repeatStr(5, " LOL"));
 
-//    console.log(repeatStr(5, " LOL"));
+function numberToString(num="") {
+   return `ini adalah ${num}`
+ }
 
-// function numberToString(num="") {
-//    return `${num}`
-//  }
+// console.log(numberToString("4"));
 
-// console.log(numberToString("1"));
 
-// const stringToNumber = (s) => {
-//    return Number(s)
-// }
+const stringToNumber = (s) => {
+   return Number(s)
+}
 // console.log(stringToNumber(1));
 
-// function positiveSum(arr) {
-//    let res=0;
-//  for (let i=0; i<arr.length; i++){
-//     console.log('arr', arr);
-//     console.log('i', i);
-//     console.log(arr[i] );
-//     if (arr[i] > 0 ){
-//       res += arr[i]
-//     }
-//  }
-//  return res;
-// }
+positiveNegativeSum = (arr) => {
+   let res=0;
+   let negative = 0;
+ for (let i=0; i<arr.length; i++){
+   //  console.log('arr', arr);
+   //  console.log('i', i);
+   //  console.log(arr[i] );
+    if (arr[i] > 0 ){
+      // res ++
+      res += arr[i]
+    } 
+    if (arr[i]<0 ){
+      negative += arr[i]
+    }
+ }
+ return {"jumlahPositive":res, "jumlahNegative":negative}
+}
 
-// console.log(positiveSum([1,-2, 6,2,8,-10]));
+// console.log(positiveNegativeSum([1,-2, 6,2,8,-10]));
 
 // function positiveSum(arr) {
 //    return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
@@ -219,29 +229,53 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 
 // console.log(reverse("halo"));
 
-// function solution(s){
-//    let res = '';
+function solution(s){
+   let res = '';
 
-//    for (let i = s.length - 1; i >= 0; i--){
-//       res = res + s[i];
-//       console.log("res", res);
-//       console.log("i", i);
-//    }
-//    return res;
-//  }console.log(solution("Tamala"));
+   for (let i = s.length - 1; i >= 0; i--){
+      res = res + s[i];
+      // console.log("res", res);
+      // console.log("i", i);
+   }
+   return res;
+ }
+//  console.log(solution("Tamala"));
 
-// function abbrevName(name){
-//    let res= name;
-//    res = res.split(" ");
-//    res = res.map(item => {
-//       console.log(item[0]);
-//       return item[0].toUpperCase()
-//    })
-//    res = res.join(".")
-//    return res;
+ reverseString = (str) => {
+   let res = '';
+   for(let i = str.length -1; i>=0; i--){
+         if(str[i]){
+            res += str[i]
+         }
+   }
+   return res;
+ }
+//  console.log(reverseString("alamat"));
 
-// }
+function abbrevName(name){
+   let res= name;
+   res = res.split(" ");
+   res = res.map(item => {
+      // console.log(item[0]);
+      return item[0].toUpperCase()
+   })
+   res = res.join(".")
+   return res;
+
+}
 // console.log(abbrevName("muhammad habiibullah"));
+
+singkatanNama = (nama) =>{
+   let res = nama;
+   res = res.split(" ");
+   res = res.map((item) =>{
+      return item[0].toUpperCase()
+   })
+   res = res.join(".")
+   return res;
+}
+
+// console.log(singkatanNama("muhammadddd habiiiibullah"));
 
 // function abbrevName(name){
 
@@ -251,8 +285,18 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 
 //# devide it
 
-// const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
+const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
 // console.log(isDivideBy(4, 1, 4));
+
+cekSisaBagi = (number, a, b) =>{
+   if(number % a === 0 && number % b === 0){
+      return true
+   } else {
+      return false
+   }
+}
+
+// console.log(cekSisaBagi(4,1,4));
 
 // function isDevideBy(number, a, b) {
 //   let res;
@@ -270,11 +314,24 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 //    let d=0
 //  if (n%6==0) d =6
 //  else d=n%6
-//    n%6 ==0 ? d=6 : d=n%6
+   // n%6 ==0 ? d=6 : d=n%6
 //    return word[d-1]
 // }
-
 // console.log(howMuchILoveYou(6));
+
+// let word = ["I love you", "a little","a lot","passionately","madly","not at all",]
+
+howMuchIHateYou = (n) =>{
+   let word = ["I love you", "a little","a lot","passionately","madly","not at all",]
+   let index = 0
+   if(n%6 == 0){
+      index = 6
+   } else {
+      index = n%6
+   }
+   return word[index-1]
+}
+// console.log(howMuchIHateYou(7));
 
 // function howMuchILoveYou(nbPetals) {
 //    let word = ["not at all", "I love you", "a little", "a lot", "passionately", "madly"]
@@ -284,6 +341,8 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 //    }
 //    return res;
 // }
+// console.log(howMuchILoveYou(7));
+
 
 //## MinMAx
 
@@ -293,40 +352,80 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 
 // console.log(minMax([1,2,3,-1,4]));
 
-// function getMiddle(s){
+hitungMinMax = (arr) =>{
+   let max = 0;
+   let min = 0;
+   for(let i = 0; i<=arr.length; i++){
+      if(arr[i] > max){
+         max = arr[i]
+      }
+      if(arr[i] < min){
+         min = arr[i]
+      } 
+   }
+   return {min, max}
+   
+}
+let angka = [1,2,3,5,-1,6,10]
+// console.log(hitungMinMax(angka));
+
+function getMiddle(s){
 // 1.menentukan word.length adalah ganiil/genap
 // 2.menampilkan 1 karakter di tengah jika ganjil
 // 3.menampilkan 2 karakter jika di genap
-//    if (s.length %2 ===0){
-//       console.log("genap");
-//       return `${s[(s.length/2)-1]}${s[s.length/2]}`
-//       // return `${s[2]}${s[3]}`
-//    } else {
-//       console.log("ganjil");
-//       return s[Math.floor(s.length/2)]
-//    }
-// }
+   if (s.length %2 ===0){
+      // console.log("genap");
+      return `${s[(s.length/2)-1]}${s[s.length/2]}`
+      // return `${s[2]}${s[3]}`
+   } else {
+      console.log("ganjil");
+      return s[Math.floor(s.length/2)]
+   }
+}
 // console.log(getMiddle("middle"));
+
+cariHurufTengah = (n) =>{
+   if(n.length % 2 === 0){
+      return `${n[n.length/2-1]}${n[n.length/2]}`
+   } else {
+      return n[Math.floor(n.length/2)]
+   }
+} 
+
+// console.log(cariHurufTengah("habbiba"));
 
 // ## remove string space
 
-// function noSpace(x){
-//    return x.split(' ').join('')
-//  }
+function noSpace(x){
+   return x.split('').join('.').toUpperCase()
+ }
 
-//  console.log(noSpace("h a b i b"));
+//  console.log(noSpace("habib"));
 
-// function sumDigits(number){
-//    let res = 0;
-//    String(number).split('').forEach(item=>{
-//       if (Number(item)>0){
-//          res += Number(item);
-//       }
-//       console.log((item));
-//    })
-//    return res;
-// }
+function sumDigits(number){
+   let res = 0;
+   String(number).split('').forEach(item=>{
+      if (Number(item)>0){
+         res += Number(item);
+      }
+      // console.log((item));
+   })
+   return res;
+}
 // console.log(sumDigits(99));
+
+jumlahAngka = (number) =>{
+   let res = 0;
+   String(number).split("").forEach((item)=>{
+      if(Number(item)>0){
+        return res += Number(item)
+      }
+   })
+   // console.log(number);
+   return res;
+}
+
+// console.log(jumlahAngka(99));
 
 // function sumDigits(number) {
 //    return Math.abs(number).toString().split('').reduce(function(a,b){return +a + +b}, 0);
@@ -334,11 +433,11 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 
 //  console.log(sumDigits(-32));
 
-// function highAndLow(numbers){
-//    let angka = numbers.split(' ')
+function highAndLow(numbers){
+   let angka = numbers.split(' ')
 
-//    return `${Math.max(...angka)} ${Math.min(...angka)}`;
-//  }
+   return `${Math.max(...angka)} ${Math.min(...angka)}`;
+ }
 
 //  console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
 
@@ -513,5 +612,6 @@ console.log(checkGanjilGenap([1, 7, 2, 6, 8]));
 // console.log(count("aba"));
 
 // ##
+
 
 
