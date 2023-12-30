@@ -334,3 +334,13 @@ function reusableFunction(){
 }
 reusableFunction()
 ```
+
+## Passing Values to Functions with Arguments
+```sh
+function functionWithArgs(one, two) {
+  console.log(one + two);
+}
+functionWithArgs(1,2)
+```
+result = 3
+
