@@ -410,3 +410,61 @@ function chainToSwitch(val) {
 
 chainToSwitch(7);
 ```
+
+## Returning Boolean Values from Functions
+```sh
+function isLess(a, b) {
+  return a < b;
+
+  // if (a < b) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+}
+
+isLess(10, 15);
+```
+## Return Early Pattern for Functions
+```sh
+// Setup
+function abTest(a, b) {
+  if(a < 0 || b < 0){
+    return ;
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+console.log(abTest(2,1));
+```
+
+## Counting Cards
+```sh
+let count = 0;
+
+function cc(card) {
+  switch(card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--
+      break;
+  }
+  if(count > 0){
+    return count + " Bet"
+  } else {
+    return count + " Hold"
+  }
+}
+
+console.log(cc(6)); 
+cc(3); cc(7); cc('K'); cc('A');
+```
