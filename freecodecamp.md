@@ -727,6 +727,91 @@ function updateRecords(records, id, prop, value) {
   }
   return records;
 }
-
 console.log(updateRecords(recordCollection, 1245, "tracks", "Addicted to Love"));
+```
+
+# Iterate with JavaScript While Loops
+```sh
+const myArray = [];
+let i =5;
+while(i >= 0){
+  myArray.push(i);
+  i--
+}
+console.log(myArray)
+```
+
+## Iterate with JavaScript For Loops
+```sh
+const myArray = [];
+for(let i=1; i <=5; i++){
+  myArray.push(i)
+}
+console.log(myArray)
+```
+
+## Iterate Odd Numbers With a For Loop
+```sh
+const myArray = [];
+for (let i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
+console.log(myArray)
+```
+
+## Count Backwards With a For Loop
+```sh
+const myArray = [];
+for(let i = 9; i>=1; i -= 2){
+  myArray.push(i)
+}
+
+console.log(myArray)
+```
+
+## Iterate Through an Array with a For Loop
+```sh
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for(let i=0; i<myArr.length; i++){
+  total += myArr[i]
+}
+```
+
+## Nesting For Loops
+```sh
+const arr = [
+  [1, 2], [3, 4], [5, 6]
+];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+```
+
+```sh
+function multiplyAll(arr) {
+  let product = 1;
+  for(let i=0; i<arr.length; i++){
+    for(let j=0; j<arr[i].length; j++){
+      // console.log(arr[i][j])
+      product *= arr[i][j]
+    }
+  }
+  return product;
+}
+console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]));
+```
+
+## Iterate with JavaScript Do...While Loops
+```sh
+const myArray = [];
+let i = 10;
+do {
+  myArray.push(i);
+  i++
+} while (i<5)
+console.log(myArray)
 ```
