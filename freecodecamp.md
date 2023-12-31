@@ -6,6 +6,7 @@ Javascript Dasar
 const money = 1 + 3
 console.log(money)
 ```
+
 result : 4
 
 ## subtract
@@ -27,13 +28,16 @@ console.log(height)
 result : 4
 
 ## remainder (modulo)
+
 ```sh
 const remainder = 11 % 3 ;
 console.log(remainder);
 ```
-result : 2 
+
+result : 2
 
 ## Compound Assignment With Augmented Addition
+
 ```sh
 let a = 35;
 let b = 11;
@@ -43,12 +47,14 @@ a += 2;
 b += 5;
 c += 9;
 ```
+
 result :
 a : 37
 b : 16
 c : 13
 
 ## Compound Assignment With Augmented subtraction
+
 ```sh
 let a = 1;
 let b = 5;
@@ -59,11 +65,14 @@ a -= 1;
 b -= 4;
 c -= 2;
 ```
+
 result :
 a : 0
 b : 1
 c : 0
+
 ## Compound Assignment With Augmented Multiplication
+
 ```sh
 let a = 5;
 let b = 2;
@@ -73,11 +82,14 @@ a *= 2;
 b *= 6;
 c *= 20;
 ```
-result : 
+
+result :
 a : 10
 b : 12
 c : 40
+
 ## Compound Assignment With Augmented Division
+
 ```sh
 let a = 9;
 let b = 6;
@@ -88,27 +100,32 @@ b /= 2;
 c /= 1;
 ```
 
-result : 
+result :
 a : 3
 b : 3
 c : 3
 
 ## Escaping Literal Quotes in Strings
+
 ```sh
-const myStr = "I am a \"double quoted\" string inside \"double qoutes\"."; 
+const myStr = "I am a \"double quoted\" string inside \"double qoutes\".";
 ```
 
 result : myStr = "I am a "double quoted" string inside "double qoutes"."
 
 ## Quoting Strings with Single Quotes
+
 ```sh
 const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
 ```
-## ! String template 
+
+## ! String template
+
 ```sh
 let myName : "habib";
 console.log(`${myName} belajar di glints academy`;
 ```
+
 result : habib belajar di glints academy
 
 ## parseInt
@@ -118,7 +135,7 @@ console.log(parseInt("100.1"));
 ```
 
 result : 100
-         
+
 ## parseFloat
 
 ```sh
@@ -142,6 +159,7 @@ result : string
 let  money = 100;
 console.log(typeof money);
 ```
+
 result : number
 
 ## boolean data type
@@ -178,7 +196,7 @@ const hasil = score === "A" ? 'Cie dapat A' : 'Gapapa deh ;('
 console.log(hasil);
 ```
 
-result : Gapapa deh ;( 
+result : Gapapa deh ;(
 
 ## Concat with plus operator
 
@@ -189,6 +207,7 @@ console.log(myStr);
 ```
 
 ## append to string
+
 ```sh
 const someAdjective = "Fun, Interesting, Boring";
 let myStr = "Learning to code is ";
@@ -204,19 +223,20 @@ lastNameLength = lastName.length;
 ```
 
 ## Find the First Character
+
 ```sh
 let firstLetterOfLastName = "";
 const lastName = "Lovelace";
-firstLetterOfLastName = lastName[0]; 
+firstLetterOfLastName = lastName[0];
 ```
 
-result : L 
+result : L
 
 ## Find the Last Character
 
 ```sh
 const lastName = "Lovelace";
-const lastLetterOfLastName = lastName[lastName.length - 1]; 
+const lastLetterOfLastName = lastName[lastName.length - 1];
 ```
 
 result : e
@@ -258,6 +278,7 @@ let myData = myArray[myArray.length-1];
 ```
 
 ## modify array data with indexes
+
 ```sh
 const myArray = [18, 64, 99];
 myArray[0] = 45
@@ -276,7 +297,7 @@ const myArray = [
 const myData = myArray[2][1];
 ```
 
-result : 8 
+result : 8
 mengakses array index 2 yaitu : [7,8,9]
 lalu mengakses array index 1 : 8
 
@@ -286,6 +307,7 @@ lalu mengakses array index 1 : 8
 const myArray = [["John", 23], ["cat", 2]];
 myArray.push(["dog", 3]);
 ```
+
 result : [["John", 23], ["cat", 2], ["dog", 3]]
 
 ## Manipulate Arrays With pop()
@@ -306,11 +328,13 @@ console.log(myArray);
 result : [["dog", 3]]
 
 ## Manipulate Arrays With unshift()
+
 shift : Menghapus data elemen pertama
 unshift : Menambahkan data di elemen pertama
+
 ```sh
 const myArray = [["John", 23], ["dog", 3]];
-myArray.shift(); 
+myArray.shift();
 myArray.unshift(["Paul", 35])
 ```
 
@@ -320,7 +344,7 @@ result : [["Paul", 35], ["dog", 3]]
 
 ```sh
 const myList = [
-  ["myName", 1], 
+  ["myName", 1],
   ["myAge", 23],
   ["myJob", 10],
   ["myHome", 12],
@@ -338,15 +362,18 @@ reusableFunction()
 ```
 
 ## Passing Values to Functions with Arguments
+
 ```sh
 function functionWithArgs(one, two) {
   console.log(one + two);
 }
 functionWithArgs(1,2)
 ```
+
 result = 3
 
 ## Multiple Identical Options in Switch Statements
+
 ```sh
 function sequentialSizes(val) {
   let answer = "";
@@ -412,6 +439,7 @@ chainToSwitch(7);
 ```
 
 ## Returning Boolean Values from Functions
+
 ```sh
 function isLess(a, b) {
   return a < b;
@@ -425,7 +453,9 @@ function isLess(a, b) {
 
 isLess(10, 15);
 ```
+
 ## Return Early Pattern for Functions
+
 ```sh
 // Setup
 function abTest(a, b) {
@@ -438,6 +468,7 @@ console.log(abTest(2,1));
 ```
 
 ## Counting Cards
+
 ```sh
 let count = 0;
 
@@ -465,11 +496,12 @@ function cc(card) {
   }
 }
 
-console.log(cc(6)); 
+console.log(cc(6));
 cc(3); cc(7); cc('K'); cc('A');
 ```
 
 ## Build JavaScript Objects
+
 ```sh
 const myDog = {
   'name' : "1",
@@ -478,6 +510,7 @@ const myDog = {
   "friends": []
 };
 ```
+
 ## Accessing Object Properties with Variables
 
 ```sh
@@ -486,12 +519,13 @@ const testObj = {
   16: "Montana",
   19: "Unitas"
 };
-const playerNumber = 16;  
+const playerNumber = 16;
 const player = testObj[playerNumber];
 console.log(player)
 ```
 
 ## Updating Object Properties
+
 ```sh
 const myDog = {
   "name": "Coder",
@@ -504,6 +538,7 @@ myDog.name = "Happy Coder"
 ```
 
 ## Add New Properties to a JavaScript Object
+
 ```sh
 const myDog = {
   "name": "Happy Coder",
@@ -515,6 +550,7 @@ myDog.bark = "woof"
 ```
 
 ## Delete Properties from a JavaScript Object
+
 ```sh
 const myDog = {
   "name": "Happy Coder",
@@ -527,6 +563,7 @@ delete myDog.tails
 ```
 
 ## Using Objects for Lookups
+
 ```sh
 // Setup
 function phoneticLookup(val) {
@@ -570,6 +607,7 @@ phoneticLookup("charlie");
 ```
 
 ## Testing Objects for Properties
+
 ```sh
 function checkObj(obj, property) {
   if(obj.hasOwnProperty(property)){
@@ -583,3 +621,112 @@ console.log(checkObj(data, "city")) // Seattle
 console.log(checkObj(data, "gift")) // Not Found
 ```
 
+## Manipulating Complex Objects
+
+```sh
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist" : "Beetles",
+    "title" : "Hey Jude",
+    "release_year" : 2013,
+    "formats" : [
+      "CD",
+      "4T",
+      "LP"
+    ],
+    "gold" : true
+  },
+];
+```
+
+## Accessing Nested Objects
+
+```sh
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"]
+```
+
+## Accessing Nested Arrays
+
+```sh
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+const secondTree = myPlants[1].list[1];
+```
+
+## Record Collection
+
+```sh
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+function updateRecords(records, id, prop, value) {
+  if (value === "") {
+    delete records[id][prop]
+  } else if (prop !== "tracks" && value !== "") {
+    records[id][prop] = value;
+  } else if (prop === "tracks" && value !== "") {
+    if (records[id].hasOwnProperty("tracks") === false) {
+      records[id][prop] = []
+    }
+    records[id][prop].push(value);
+  }
+  return records;
+}
+
+console.log(updateRecords(recordCollection, 1245, "tracks", "Addicted to Love"));
+```
