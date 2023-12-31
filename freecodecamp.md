@@ -468,3 +468,118 @@ function cc(card) {
 console.log(cc(6)); 
 cc(3); cc(7); cc('K'); cc('A');
 ```
+
+## Build JavaScript Objects
+```sh
+const myDog = {
+  'name' : "1",
+  "legs" : 2,
+  "tails": 3,
+  "friends": []
+};
+```
+## Accessing Object Properties with Variables
+
+```sh
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+const playerNumber = 16;  
+const player = testObj[playerNumber];
+console.log(player)
+```
+
+## Updating Object Properties
+```sh
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.name = "Happy Coder"
+```
+
+## Add New Properties to a JavaScript Object
+```sh
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = "woof"
+```
+
+## Delete Properties from a JavaScript Object
+```sh
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog.tails
+```
+
+## Using Objects for Lookups
+```sh
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+
+  // Only change code below this line
+  // switch(val) {
+  //   case "alpha":
+  //     result = "Adams";
+  //     break;
+  //   case "bravo":
+  //     result = "Boston";
+  //     break;
+  //   case "charlie":
+  //     result = "Chicago";
+  //     break;
+  //   case "delta":
+  //     result = "Denver";
+  //     break;
+  //   case "echo":
+  //     result = "Easy";
+  //     break;
+  //   case "foxtrot":
+  //     result = "Frank";
+  // }
+
+  // Only change code above this line
+  result = lookup[val];
+  return result;
+}
+
+phoneticLookup("charlie");
+```
+
+## Testing Objects for Properties
+```sh
+function checkObj(obj, property) {
+  if(obj.hasOwnProperty(property)){
+    return obj[property]
+  } else {
+    return "Not Found"
+  }
+}
+let data = {city: "Seattle"}
+console.log(checkObj(data, "city")) // Seattle
+console.log(checkObj(data, "gift")) // Not Found
+```
+
