@@ -985,3 +985,4 @@ function rangeOfNumbers(startNum, endNum) {
 console.log(rangeOfNumbers(1,5))
 ```
 result : [ 1, 2, 3, 4, 5 ]
+

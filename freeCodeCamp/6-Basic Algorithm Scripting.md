@@ -105,3 +105,26 @@ Check if the element of the sub array is larger than the currently stored larges
 After the inner loop, save the largest number in the corresponding position inside of the results array.
 And finally return said array.
 
+## Confirm the Ending
+```sh
+function confirmEnding(str, target) {
+  return str.substr(str.length - target.length) === target;
+  // return str.endsWith(target) 
+}
+console.log(confirmEnding("Bastian", "n"));
+```
+result : true
+
+## Repeat a String Repeat a String
+```sh
+function repeatStringNumTimes(str, num) {
+  let result = ""
+  for(let i=0; i<num; i++){
+    result += str
+  }
+  return result;
+  // return str.repeat(num)
+}
+console.log(repeatStringNumTimes("abc", 3));
+```
+result : abcabcabc
