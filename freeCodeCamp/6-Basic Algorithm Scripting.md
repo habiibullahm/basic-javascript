@@ -128,3 +128,20 @@ function repeatStringNumTimes(str, num) {
 console.log(repeatStringNumTimes("abc", 3));
 ```
 result : abcabcabc
+
+## Truncate a String
+```sh
+function truncateString(str, num) {
+  if(str.length > num){
+    return str.slice(0, num) + "..."
+  } else {
+    return str
+  }
+}
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+```
+result : A-tisket...
+
+Problem Explanation
+We need to reduce the length of the string or truncate it if it is longer than the given maximum length specified and add ... to the end. If it is not that long then we keep it as is.
+
