@@ -815,3 +815,173 @@ do {
 } while (i<5)
 console.log(myArray)
 ```
+
+## Replace Loops using Recursion
+```sh
+function sum(arr, n) {
+  if(n <= 0){
+    return 0;
+  } else {
+    return sum(arr, n-1) + arr[n-1]
+  }
+}
+console.log(sum([2, 3, 4, 5], 3))
+
+// function multiply(arr, n) {
+//     if (n <= 0) {
+//       return 1;
+//     } else {
+//       return multiply(arr, n - 1) * arr[n - 1];
+//     }
+//   }
+
+//   console.log(multiply([1,2,2], 3))
+```
+
+## Profile Lookup
+```sh
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  for(let i=0; i<contacts.length; i++){
+    if(contacts[i].firstName === name){
+      if(contacts[i].hasOwnProperty(prop)){
+       return contacts[i][prop]
+      } else {
+        return "No such property"
+      }
+    }
+  }
+  return "No such contact"
+}
+
+console.log(lookUpProfile("Akira", "likes"));
+```
+result : [ 'Pizza', 'Coding', 'Brownie Points' ]
+
+## Generate Random Fractions with JavaScript
+```sh
+function randomFraction() {
+  return Math.random()
+}
+console.log(randomFraction(1));
+```
+result : 0.5316579673871293
+
+## Generate Random Whole Numbers with JavaScript
+```sh
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+console.log(randomWholeNum())
+```
+result : Num(0-9)
+
+## Generate Random Whole Numbers within a Range
+```sh
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(1, 6))
+```
+result : NumRange(1-6)
+
+## Use the parseInt Function
+```sh
+function convertToInteger(str) {
+  return parseInt(str)
+}
+console.log(convertToInteger("56"));
+```
+result : 56
+
+## Use the parseInt Function with a Radix
+```sh
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+console.log(convertToInteger("10011"));
+```
+result : 19
+
+## Use the Conditional (Ternary) Operator
+```sh
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal"
+}
+console.log(checkEqual(1, 2));
+```
+result : Not Equal
+
+## Use Multiple Conditional (Ternary) Operators
+```sh
+function checkSign(num) {
+  return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero"
+}
+console.log(checkSign(10));
+```
+result : positive
+
+## Use Recursion to Create a Countdown
+```sh
+function countdown(n){
+   return n < 1 ? [] : [n, ...countdown(n - 1)];
+}
+console.log(countdown(5))
+```
+result : [ 5, 4, 3, 2, 1 ]
+
+```sh
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(10));
+```
+result : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+## Use Recursion to Create a Range of Numbers
+```sh
+function rangeOfNumbers(startNum, endNum) {
+  if(endNum < startNum){
+    return []
+  } else {
+    const arr = rangeOfNumbers(startNum, endNum -1)
+    arr.push(endNum)
+    return arr
+  }
+};
+console.log(rangeOfNumbers(1,5))
+```
+result : [ 1, 2, 3, 4, 5 ]
