@@ -193,8 +193,10 @@ console.log(booWho(true));
 result : true
 
 ## Title Case a Sentence
+
 Problem Explanation
 We have to return a sentence with title case. This means that the first letter will always be in uppercase and the rest will be in lowercase.
+
 ```sh
 function titleCase(str) {
   let newTitle = str.split(" ");
@@ -206,12 +208,15 @@ function titleCase(str) {
 }
 console.log(titleCase("I'm a little tea pot"));
 ```
+
 result : I'm A Little Tea Pot
 Split the string by white spaces, and create a variable to track the updated title. Then we use a loop to turn turn the first character of the word to uppercase and the rest to lowercase. by creating concatenated string composed of the whole word in lowercase with the first character replaced by its uppercase.
 
 ## Slice and Splice
+
 Problem Explanation
 We need to copy each element from the first array into the second array starting at the index n. We’ve also got to ensure that the original arrays are not mutated. That is, we cannot make any changes to the original arrays.
+
 ```sh
 function frankenSplice(arr1, arr2, n) {
   let localArray = arr2.slice()
@@ -224,6 +229,7 @@ function frankenSplice(arr1, arr2, n) {
 
 console.log(frankenSplice([1, 2, 3], [4, 5], 1));
 ```
+
 result : [ 4, 1, 2, 3, 5 ]
 Code Explanation
 Our goal is to take all of the elements from arr1 and insert them into arr2 starting with index position n. At the same time we must ensurethat neither arr or arr2 have been mutated.
@@ -235,3 +241,76 @@ Now that we have an array that we can mutate on, we can iterate through every it
 We increment the index n by one. This will ensure that every item from the arr1 is inserted into localArray in the proper index position.
 
 Finally, we return the localArray and end the function.
+
+## Falsy Bouncer
+
+Problem Explanation
+Remove all falsy values from an array.
+
+```sh
+function bouncer(arr) {
+  let filteredArr = []
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]) filteredArr.push(arr[i])
+  }
+  return filteredArr;
+}
+console.log(bouncer([7, "ate", "", false, 9]));
+```
+
+result : [ 7, 'ate', 9 ]
+Code Explanation
+We create a new empty array (filteredArr).
+We use a for cycle to iterate over all elements of the provided array (arr).
+We use the if statement to check if the current element is truthy or falsy.
+If the element is truthy, we push it to the new array (newArray). This result in the new array (filteredArr) containing only truthy elements.
+We return the new array (filteredArr).
+
+## Where do I Belong
+
+Problem Explanation
+This can be a tricky problem to understand. You need to find where in the array a number should be inserted by order, and return the index where it should go.
+
+```sh
+function getIndexToIns(arr, num) {
+  arr.sort((a,b) => a-b)
+  console.log(arr)
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] >= num) return i
+  }
+  return arr.length;
+}
+console.log(getIndexToIns([5, 3, 20, 3], 5));
+```
+
+result : [ 3, 3, 5, 20 ]
+2 (index)
+
+Code Explanation
+First I sort the array using .sort(callbackFunction) to sort it by lowest to highest, from left to right.
+Then I use a for loop to compare the items in the array starting from the smallest one. When an item on the array is greater than the number we are comparing against, then we return the index.
+
+## Mutations
+Problem Explanation
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array…
+```sh
+function mutation(arr) {
+  const test = arr[1].toLowerCase();
+  const target = arr[0].toLowerCase();
+  console.log(target, test)
+  
+  for (let i = 0; i < test.length; i++) {
+    if (target.indexOf(test[i]) < 0) return false
+  }
+  return true
+}
+console.log(mutation(["floor", "for"]));
+```
+result : floor for
+true
+
+Code Explanation
+First we make the two strings in the array lowercase. test will hold what we are looking for in target.
+Then we loop through our test characters and if any of them is not found we return false.
+
+If they are all found, the loop will finish without returning anything and we get to return true.
