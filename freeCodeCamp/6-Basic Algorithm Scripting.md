@@ -78,6 +78,9 @@ result : 6
 
 ## Return Largest Numbers in Arrays
 
+Problem Explanation
+You will get an array that contains sub arrays of numbers and you need to return an array with the largest number from each of the sub arrays.
+
 ```sh
 function largestOfFour(arr) {
   const result = [];
@@ -110,7 +113,7 @@ And finally return said array.
 
 ```sh
 function confirmEnding(str, target) {
-  return str.substr(str.length - target.length) === target;
+  return str.slice(str.length - target.length) === target;
   // return str.endsWith(target)
 }
 console.log(confirmEnding("Bastian", "n"));
@@ -119,6 +122,9 @@ console.log(confirmEnding("Bastian", "n"));
 result : true
 
 ## Repeat a String Repeat a String
+
+Problem Explanation
+The program is very simple, we have to take a variable and return that variable being repeated certain amount of times. No need to add space or anything, just keep repeating it into one single string.
 
 ```sh
 function repeatStringNumTimes(str, num) {
@@ -133,6 +139,15 @@ console.log(repeatStringNumTimes("abc", 3));
 ```
 
 result : abcabcabc
+
+```sh
+function repeatStringNumTimes(str, num) {
+  if (num <= 0) {
+    return "";
+  } return str + repeatStringNumTimes(str, num - 1)
+}
+console.log(repeatStringNumTimes("abc", 3));
+```
 
 ## Truncate a String
 
@@ -291,14 +306,16 @@ First I sort the array using .sort(callbackFunction) to sort it by lowest to hig
 Then I use a for loop to compare the items in the array starting from the smallest one. When an item on the array is greater than the number we are comparing against, then we return the index.
 
 ## Mutations
+
 Problem Explanation
 Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array…
+
 ```sh
 function mutation(arr) {
   const test = arr[1].toLowerCase();
   const target = arr[0].toLowerCase();
   console.log(target, test)
-  
+
   for (let i = 0; i < test.length; i++) {
     if (target.indexOf(test[i]) < 0) return false
   }
@@ -306,6 +323,7 @@ function mutation(arr) {
 }
 console.log(mutation(["floor", "for"]));
 ```
+
 result : floor for
 true
 
@@ -314,3 +332,29 @@ First we make the two strings in the array lowercase. test will hold what we are
 Then we loop through our test characters and if any of them is not found we return false.
 
 If they are all found, the loop will finish without returning anything and we get to return true.
+
+## Chunky Monkey
+
+Problem Explanation
+Our goal for this Algorithm is to split arr (first argument) into smaller chunks of arrays with the length provided by size (second argument). There are 4 green checks (objectives) our code needs to pass in order to complete this Algorithm:
+
+```sh
+function chunkArrayInGroups(arr, size) {
+  let result = []
+  for(let i=0; i<arr.length; i+=size){
+    result.push(arr.slice(i, i +size))
+  }
+  return result;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+```
+
+result : [ [ 'a', 'b' ], [ 'c', 'd' ] ]
+Code Explanation
+First, we create an empty array newArr where we will store our ‘chunks’.
+The for loop starts at zero, increments by size each time through the loop, and stops when it reaches arr.length.
+Note we are using the loop to generate numbers we can use as indices to slice the array in the right locations.
+Inside our loop, we create each chunk using arr.slice(i, i+size). The slice method accepts two arguments with the first argument being the index of where the slice should start and the second argument being where the slice should end but does not include the ending index.
+We add this chunk/slice to newArr with newArr.push().
+Finally, we return the value of newArr once the for loop is complete.
